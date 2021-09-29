@@ -12,7 +12,7 @@
 #include <string>
 
 //Contains strings with the name of the programs to be used
-const std::vector<std::string> programs = {"Boxer"};
+const std::vector<std::string> programs = {"Boxer", "Collatz"};
 
 //Asks user and then runs specified program
 void runProgram();

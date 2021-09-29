@@ -9,6 +9,7 @@
 
 #include "programSelector.h"
 #include "boxer.h"
+#include "collatz.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -30,7 +31,6 @@ void runProgram(){
     int selection = -1;
     while(true){
         cin >> selection;
-        cout << selection;
         //Checks if you selected a valid option, if so, breaking the loop
         if(selection > 0 && selection <= programs.size() + 1){break;}
         cout << "Your selection was outside the bounds please try again" << endl;
@@ -50,6 +50,7 @@ void runProgram(){
             boxer();
             break;
         case 2:
+            collatz();
             break;
         default:
             break;
