@@ -23,17 +23,19 @@ void runProgram(){
     //gives list of known programs
     cout << "Which program would you like to run? (type the number inside the brackets)" << endl;
     for(int i=0; i<programs.size(); i++) {
-        cout << "[" << i << "]: " << programs.at(i) << endl;
+        cout << "[" << i + 1 << "]: " << programs.at(i) << endl;
     }
 
     //Continually asks users what program they would like to run until the a valid answer is given
     int selection = -1;
     while(true){
         cin >> selection;
-        if(selection >=0 && selection <= programs.size()){break;}
-        cout << "Your selection was outside the bounds please try again." << endl;
+        cout << selection;
+        //Checks if you selected a valid option, if so, breaking the loop
+        if(selection > 0 && selection <= programs.size() + 1){break;}
+        cout << "Your selection was outside the bounds please try again" << endl;
     }
-    cout << "You have selected " << programs.at(selection) << "." << endl;
+    cout << "You have selected " << programs.at(selection - 1) << endl;
 
 
 
@@ -44,11 +46,10 @@ void runProgram(){
      * ADD SWITCH CASES HERE STATEMENTS HERE
      */
     switch(selection) {
-        case 0:
+        case 1:
             boxer();
             break;
-        case 1:
-            cout << "eee";
+        case 2:
             break;
         default:
             break;
