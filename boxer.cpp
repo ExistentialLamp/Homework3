@@ -17,11 +17,18 @@ void boxer(){
     string boxedString;
     //How many asterisks deep the box will be
     int thickness;
-    cout << "Type a string to be boxed: ";
+    cout << "Type a string to be boxed" << endl;
     cin >> boxedString;
-    cout << "How thick should the box be: ";
-    cin >> thickness;
-    cout << endl << endl;
+    cout << "How thick should the box be" << endl;
+    while(true) {
+        cin >> thickness;
+        if(thickness > 0) {
+            break;
+        } else {
+            cout << "That number was negative or zero, please try again" << endl;
+        }
+    }
+    cout << endl;
 
     /*
      * The definition of how many lines there are:
@@ -35,7 +42,7 @@ void boxer(){
      * a space on either side (2)
      * thickness on either side (2*thickness)
      */
-    const int width = boxedString.length() + 2 * thickness + 2;
+    const unsigned int width = boxedString.length() + 2 * thickness + 2;
 
     //What character the box will be made out of
     const char boxChar = '*';
@@ -47,7 +54,15 @@ void boxer(){
     //Creates a string of the negative space character for easier printing
     string boxSpaceLine;
     boxSpaceLine.assign(width - 2 * thickness, boxSpaceChar);
+
+    //Where the box is created
     for(int i=0; i < height; i++) {
+        /*
+         * I realized there are basically only three different types of lines that are pretty predictable to place
+         * so I create the box based on what line type i need
+         */
+
+
         //If in top or bottom solid part, print a line of boxChar
         if(i < thickness || i >= height - thickness) {
             cout << boxLine;
