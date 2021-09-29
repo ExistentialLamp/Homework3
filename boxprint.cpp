@@ -1,9 +1,10 @@
 /*
- * main.cpp
+ * boxprint.cpp
  * Simon Bosse
  * 9/29/21
- * just runs programSelector, which is encapsulated seperately for future use
+ * Runs program selector because I find it easiest to do it this way
  */
+
 #include "programSelector.h"
 
 int main() {

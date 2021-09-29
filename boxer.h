@@ -4,6 +4,7 @@
 
 #ifndef HOMEWORK3_BOXER_H
 #define HOMEWORK3_BOXER_H
+#include <string>
 
 void boxer();
 
