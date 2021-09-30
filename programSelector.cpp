@@ -10,6 +10,7 @@
 #include "programSelector.h"
 #include "boxer.h"
 #include "collatz.h"
+#include "quadratic.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -51,6 +52,9 @@ void runProgram(){
             break;
         case 2:
             collatz();
+            break;
+        case 3:
+            quadratic();
             break;
         default:
             break;
