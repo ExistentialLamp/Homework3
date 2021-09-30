@@ -1,6 +1,9 @@
-//
-// Created by owner on 9/29/2021.
-//
+/*
+ * boxer.cpp
+ * Simon Bosse
+ * 9/29/21
+ * Encapsulates text in a box of a character
+ */
 
 #include "boxer.h"
 #include <iostream>

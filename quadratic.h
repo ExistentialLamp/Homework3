@@ -1,6 +1,9 @@
-//
-// Created by owner on 9/29/2021.
-//
+/*
+ * quadratic.h
+ * Simon Bosse
+ * 9/29/21
+ * calculates the roots of a quadratic equation
+ */
 
 #ifndef HOMEWORK3_QUADRATIC_H
 #define HOMEWORK3_QUADRATIC_H

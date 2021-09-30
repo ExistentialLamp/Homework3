@@ -1,6 +1,9 @@
-//
-// Created by owner on 9/29/2021.
-//
+/*
+ * quadratic.cpp
+ * Simon Bosse
+ * 9/29/21
+ * calculates the roots of a quadratic equation
+ */
 
 #include "quadratic.h"
 #include <iostream>
