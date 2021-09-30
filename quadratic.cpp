@@ -33,12 +33,27 @@ void quadratic(){
     cout <<"(" << a << ")x^2 + (" << b << ")x + (" << c << ")";
     //
     if(determinant < 0){
-        cout << " has no roots";
+        cout << " has no real roots";
         return;
     } else if(determinant ==  0) {
         cout << " has a root at x = " << -b / (2*a);
     } else {
         cout << " has two roots at x = " << (-b - sqrt(determinant)) / (2*a);
         cout << " and x = " << (-b + sqrt(determinant)) / (2*a);
+    }
+    quadraticTest(a, b, c);
+}
+
+void quadraticTest(float a, float b, float c){
+    float determinant = b*b - 4*a*c;
+    if(determinant >= 0) {
+        //Outputs y at the calculated roots, should be very, very low
+        float quadPositiveForm = (-b + sqrt(determinant)) / (2 * a);
+        float quadNegativeForm = (-b - sqrt(determinant)) / (2 * a);
+        cout << endl << "Error due to rounding.";
+        cout << "\nf(" << quadPositiveForm << ") = " << a * std::pow(quadPositiveForm, 2) + b * quadPositiveForm + c;
+        cout << "\nf(" << quadNegativeForm << ") = " << a * std::pow(quadNegativeForm, 2) + b * quadNegativeForm + c;
+    } else {
+        cout << "\n f(x) has no real roots";
     }
 }
