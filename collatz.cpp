@@ -9,9 +9,13 @@ using std::endl;
 using std::cin;
 
 void collatz(){
-    int collatzSeed;
-    cout << "Type a positive integer" << endl;
-    cin >> collatzSeed;
+    int collatzSeed = -1;
+    int steps = 0;
+    while(collatzSeed < 1) {
+        cout << "Type a positive integer" << endl;
+        cin >> collatzSeed;
+    }
+
     while(collatzSeed > 1) {
         cout << collatzSeed << ' ';
         if(collatzSeed % 2 == 0) {
@@ -20,6 +24,7 @@ void collatz(){
             collatzSeed *= 3;
             collatzSeed++;
         }
+        steps += 1;
     }
-    cout << collatzSeed;
+    cout << collatzSeed << endl << "It took " << steps << " steps to complete";
 }
